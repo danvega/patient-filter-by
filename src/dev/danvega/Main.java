@@ -16,11 +16,11 @@ public class Main {
 	    Patient natasha = new Patient("8608148d-d9e6-4e73-92de-6672b37e628f","Natasha","natasha@gmail.com");
 	    natasha.setSamples(List.of(new Sample(Time.MORNING,0.44),new Sample(Time.AFTERNOON,0.19),new Sample(Time.EVENING,0.28)));
 
-		System.out.println("Patients -----------------------------------------------------------------------");
+		System.out.println("Patients --------------------------------------------------------------");
 	    List<Patient> patients = List.of(jasmin,natasha);
         System.out.println(patients);
 
-		System.out.println("Filtered Patients -----------------------------------------------------------------------");
+		System.out.println("Filtered Patients -----------------------------------------------------");
 		Predicate<Sample> afternoon = sample -> sample.getTime().equals(Time.AFTERNOON) && sample.getValue() < 0.20;
 		Predicate<Sample> evening = sample -> sample.getTime().equals(Time.EVENING) && sample.getValue() > 0.25;
 
